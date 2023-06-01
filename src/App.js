@@ -1,4 +1,5 @@
 import SetUp from './Components'
+// import Test from './Components/test'
 // import List from './Components/displayList'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
     <div className="App">
       <SetUp />
+      {/* <Test /> */}
     </div>
       </>
   );

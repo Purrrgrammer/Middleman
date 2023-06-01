@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.logo {
+  text-align: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -32,4 +36,21 @@ code {
 
   background-color: grey;
   margin: 20px 0;
+}
+
+.individualItem * {
+  padding: 0;
+  margin: 0;
+}
+
+.individualItem h1 {
+  color: white;
+}
+
+.individualItem img {
+  width: 300px;
+}
+
+.individualItem h2 {
+  color: red;
 }
