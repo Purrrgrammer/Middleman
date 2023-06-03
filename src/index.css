@@ -33,7 +33,6 @@ code {
 }
 
 .list {
-
   background-color: grey;
   margin: 20px 0;
 }
@@ -53,4 +52,54 @@ code {
 
 .individualItem h2 {
   color: red;
+}
+
+/* Navbar */
+ul {
+  display: flex;
+}
+
+li {
+  flex: 1;
+  list-style-type: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+li>input {
+  flex: 2;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.messaging-space {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chatA {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.chatM {
+  justify-content: center;
+}
+
+.chatB {
+  text-align: flex-end;
+}
+
+.chat-space {
+  display: flex;
+  flex-direction: column;
 }

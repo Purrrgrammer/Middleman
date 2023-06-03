@@ -1,0 +1,24 @@
+!!WHAT TO HAVE!!
+ON NAVBAR
+HOME
+    to see hottest items on the market
+
+BIDDING
+    to bid items
+        features: countdown on the item bid period
+BUYING
+    to see items on the market
+            features:add to cart
+SELLING
+    to add your items > the items will linked to buy
+            features: reviewing your items status
+CORE/CHAT
+    for the coperate to midd between buyers and sellers
+            features:chat log transaction approval/item received   
+
+
+
+
+ABOUT US    
+    to see wesite info
+CONTACT US

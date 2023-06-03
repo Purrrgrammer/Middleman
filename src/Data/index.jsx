@@ -1,0 +1,6 @@
+const setOfppl = {
+
+    people: 'hi'
+
+
+}
