@@ -1,6 +1,0 @@
-const setOfppl = {
-
-    people: 'hi'
-
-
-}

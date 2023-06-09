@@ -1,15 +1,17 @@
-import SetUp from './Components'
-// import Test from './Components/test'
-// import List from './Components/displayList'
+import { Route,Routes,BrowserRouter } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import HomePage from "./Pages/HomePage";
+import LoginPage from "./Pages/LoginPage";
 
 function App() {
   return (
-    <>
-    <div className="App">
-      <SetUp />
-      {/* <Test /> */}
-    </div>
-      </>
+    <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path="/" exact element={<HomePage/>}/>
+          <Route path="/login" element={<LoginPage/>}/>
+        </Routes>
+    </BrowserRouter>
   );
 }
 
