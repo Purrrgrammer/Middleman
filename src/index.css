@@ -103,3 +103,27 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.bid-pic {
+  position: relative;
+  box-sizing: border-box;
+  width: 400px;
+}
+
+.bid-pic img {
+  width: 400px;
+}
+
+.count-down {
+  color: red;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  width: 300px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {}

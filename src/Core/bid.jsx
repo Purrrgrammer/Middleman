@@ -1,61 +1,66 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect, useReducer } from "react";
+import { dataItems } from '../Data'
+import Card from './card';
 
 export const Bid = () => {
-    const [time, setTime] = useState(new Date().getTime())
-    const [timeOut, setTimeOut] = useState(new Date('3 jul 2023').getTime())
-    const [defaultPic, setdefaultPic] = useState('https://www.mrporter.com/variants/images/38063312421049678/in/w560_q60.jpg')
-    const [highestPrice, setHighestPrice] = useState(0)
-    const [inputPrice, setInputPrice] = useState(0)
 
+    //Data
+    const [items, useItems] = useState(dataItems);
+    //Time
+    const [now, setNow] = useState(new Date().getTime());
 
+    // console.log(dataItems[0].exp)
+
+    //Items highest price 
+    const [highestPrice, setHighestPrice] = useState(0);
+    const [inputPrice, setInputPrice] = useState(0);
     //handler
     const onChangeHandler = (e) => {
         setInputPrice(e.target.value)
-    }
-
+    };
     const onClickHandler = () => {
         highestPrice < inputPrice ? setHighestPrice(inputPrice) : alert('please enter the bigger price')
-
-    }
-
-    const getTime = () => {
-        const timeRemaining = (timeOut - time) / 1000
-        let days = Math.floor(timeRemaining / (60 * 60 * 24))
-        let hours = Math.floor(
-            (timeRemaining % (60 * 60 * 24)) / (60 * 60) //convert seconds to hours
-        )
-        //let minutes => CHECKED
-        let minutes = Math.floor(timeRemaining / (60))
-        //let seconds => CHECKED
-        let seconds = Math.floor(timeRemaining)
-        console.log("this is a time format", days, " ", hours, " ", minutes, " ", seconds, " ",)
-
-        return [days, hours, minutes, seconds]
-
-    }
-
+    };
+    //Countdown Bidding
+    //Without cleanup function
+    /*
     useEffect(() => {
-        setInterval(() => {
-            getTime();
-        }
-            , 1000)
-    }, [])
+        const intervalTask = setInterval(() => {
+            const data = getTime(timeOut)
+            setTimeRemaining({ ...data })
+        }, 1000)
+        return () => clearInterval(intervalTask);
+    }, [])*/
+
+    // const { days, hours, minutes, seconds } = timeRemaining
+    // dataItems.forEach(el => console.log("this is items id", el.id))
 
     return (
         <div>
             <div className='bid-item'>
-                <h1>Item Name</h1>
-                <img src={defaultPic} alt="" style={{ height: '300px' }} />
-                <h1>{highestPrice}</h1>
-                <input type="number" onChange={onChangeHandler} />
-                <button onClick={onClickHandler}>Place Bid</button>
+                <div>
+                    {items.map(el => {
+                        return (
+                            <Card el={el} onChangeHandler={onChangeHandler} onClickHandler={onClickHandler} />
+                        )
+                    })}
+                </div>
             </div>
-            {/* <h1>{days}</h1>
-            <h1>{hours}</h1>
-            <h1>{minutes}</h1>
-            <h1>{seconds}</h1> */}
         </div>);
 }
 
 export default Bid;
+
+//set ID to data
+
+//What's left
+//countdonwn dynamically
+
+//whats left formatting the countdown
+
+//iterate items data
+
+
+//set highest price in the data object
+//seperately

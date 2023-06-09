@@ -9,6 +9,7 @@ export const Navbar = () => {
     }
     return (
         <nav>
+            <Link to="/home"><h1 style={{ fontSize: "3rem", textAlign: 'center' }}>Middlemen</h1></Link>
             <ul>
                 {/* <Link to='/'>Home</Link> */}
                 <input type='text' placeholder='Search' />
