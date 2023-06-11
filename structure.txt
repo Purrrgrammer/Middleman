@@ -16,9 +16,6 @@ CORE/CHAT
     for the coperate to midd between buyers and sellers
             features:chat log transaction approval/item received   
 
-
-
-
 ABOUT US    
     to see wesite info
 CONTACT US

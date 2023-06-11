@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect, useReducer } from "react";
 import { dataItems } from '../Data'
-import Card from '../../Subcore/card_for_bid';
+import Card from '../Subcore/card_for_bid';
 
 export const Bid = () => {
 
