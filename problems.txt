@@ -1,0 +1,30 @@
+ปัญหา 1 (ที่กำลังทำอยู่)
+ใส่funcitonality ลงไปใน prop ของ input button
+ดังนี้
+    < input type = "number" onChange = {
+        onChangeHandler = (e) => {
+            setInputPrice(e.target.value)
+
+        }
+    } />
+        <button onClick={onClickHandler = () => {
+            el.highestPrice < el.inputPrice ? setHighestPrice(el.inputPrice) : alert('please enter the bigger price')
+            console.log(el.highestPrice)
+        }}>Place Bid</button>
+
+Problem => prop ที่ส่งไปเป็นundefinedในcomponentหลัก เพราะไม่ได้มีการประกาศตัวแปร ลงในcomponentรอง
+
+
+
+ปัญหา 2
+ประกาศตัวแปรและการทำงานของ function ลงในcomponent รองก่อนrender
+
+const onChangeHandler = (e) => {
+    setInputPrice(e.target.value)
+}
+
+const onClickHandler = () => {
+    el.highestPrice < el.inputPrice ? setHighestPrice(el.inputPrice) : alert('please enter the bigger price')
+    console.log(el.highestPrice)
+};
+แต่ก็ยังเจอปัญหาที่การรับค่าหลัง render ใน component รอง
